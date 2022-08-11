@@ -1,40 +1,23 @@
-var content = `<div>
+var content = `
+<div class="center-search">
 <h1>MagiDex</h1>
-<p> andinoianlasdkjgalijbg - Winston Churchill</p>
-<input type="text" placeholder="Search something..." autocomplete="off" maxlength="100" minlength="0">
+<p> This Game Will Ruin Your Life</p>
+<input class = "search-bar long" type="text" placeholder="Search..." autocomplete="off" maxlength="100" minlength="0">
 </div>
-<div>
-<input class="button1" type="button" value="Search">
-<input type="button" onclick="randomFunc()" value="Advanced Search">
-<input type="button" onclick="randomFunc()" value="Random Search">
+<div class="search-buttons">
+<input class = "search-buttons-long" type="button" value="Search">
+<input class = "search-buttons-long" type="button" value="Advanced Search">
+<input class = "search-buttons-long" type="button" value="Random Search">
 </div>
-<div class="stage">
-<div class="container">
-    <div class="ring">
-        <div class="img">1</div>
-        <div class="img">2</div>
-        <div class="img">3</div>
-        <div class="img">4</div>
-        <div class="img">5</div>
-        <div class="img">6</div>
-        <div class="img">7</div>
-        <div class="img">8</div>
-        <div class="img">9</div>
-        <div class="img">10</div>
-    </div>
-</div>  
+<div class="bottom-image"> 
+<img src="/images/DSC_9651.jpg" width="15%" height="25%">
 </div>`
 
+document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelector(".content").innerHTML += content;
+})
 
-// document.querySelector("#Homepage").addEventListener("click", ()=>{
-//     document.querySelector(".content").innerHTML += content;
-// })
-
-
-
-// const callMeMaybe = document.querySelector("#content").innerHTML += "<p>Hello World</p>"
-
-// document.getElementById("button1").addEventListener("click", callMeMaybe);
-
-
-
+document.querySelector("#Homepage").addEventListener("click", (event)=>{
+    event.preventDefault();
+    document.querySelector(".content").innerHTML += content;
+})
