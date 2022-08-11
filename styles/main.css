@@ -107,7 +107,7 @@ h1{
 .bottom-image{
     display: flex;
     justify-content: center;    
-<<<<<<< HEAD
+
 
 }
 /* img{
@@ -115,9 +115,9 @@ h1{
 } */
 
 
-=======
-}
-<<<<<<< HEAD
+
+
+
 img{
     border: 5px solid #555;
 }
@@ -152,7 +152,7 @@ img{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-=======
+
 .search-result-box{
     width: 90vw;
     height: 80vh;
@@ -184,5 +184,4 @@ img{
     margin: 0 0 9px 0;
     height:300px;
 }
->>>>>>> 897de900b5beced6cefe8106b7d4dcdde473e76f
->>>>>>> ff4bf52893117ff7cd65c019521b70b5e4853122
+
