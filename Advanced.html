@@ -1,16 +1,199 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Landing Page</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagiDex</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/color-wheel-logo.png"/>
+    <link rel="stylesheet" href="/styles/main.css"/>
+</head>
+<header>
+    <nav class="shift">
+        <div class="nav-containter">
+            <div class="link-container">
+                <div class="nav-item active">
+                    <a id="Homepage" href="./Homepage.html">
+                    <img src="./images/color-wheel-logo.png"width="28" height="28" >
+                    </a>
+                </div>
+                <div class="nav-item active">
+                    <a href="./Homepage.html">
+                        <span href="./Homepage.html">Random Card</span>
+                    </a>   
+                </div>
+                <a href="./Homepage.html">
+                    <span href="./Homepage.html">Advanced Search</span>
+                </a>
+                <a href="./Homepage.html">
+                    <span href="./Homepage.html">About</span>
+                </a>
+                </div >
+                <div class="search-bar-container">
+                    <input class="nav-item active search-bar" type="search" placeholder="Search..." autocomplete="off" maxlength="100" minlength="0">
+                    <button class="nav-item active search-button"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<body class="content">
+    <div>
+        <h1>MadiDex</h1>
+        <p>andinoianlasdkjgalijbg - Winston Churchill</p>
+    </div>
+               
+    <section class="hero">
+        <div class="container">
+            <div class="lext-col">
+                <p class="subhead">Searching for something different?</p>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </section>
 
-        <h1>This would be a header</h1>
-        <p> Parragraph types if any.</p>
+    <section class="advanced-filtering">
+        <div class="container">
+            <!-- <ul>
+                <li>Card Name</li>
+                <li>Text</li>
+                <li>Colors</li>
+                <li>Commander</li>
+                <li>Mana Cost</li>
+                <li>Stats</li>
+                <li>Formats</li>
+                <li>Rarity</li>
+                <li>Prices</li>
+                <li>Artist</li>
+                <li>Flavor Text</li>
+                <li>Lore Finder</li>
+                <li>Lenguage</li>
+                <li>Preferences</li> 
+            </ul> -->
+            <h2>Card Name</h2>          
+                <input class="nav-item active search-bar" type="search" placeholder="Any words in the name, e.g. 'Fire'" autocomplete="off" maxlength="100" minlength="0">
 
-    </body>
-    <body> 
-        <h2> Second Header </h2>
-        <p> parragraph.</p>
-    </body>
+            <h2>Text</h2>
+                <input class="nav-item active search-bar" type="search" placeholder="Any test, e.g. 'draw a card'" autocomplete="off" maxlength="100" minlength="0">
+
+            <h2>Type Line</h2>
+                <input class="nav-item active search-bar" type="search" placeholder="Enter a type or choose from the list" autocomplete="off" maxlength="100" minlength="0">
+                <label class="container">Allow partial type matches
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+
+            <h2>Colors</h2>
+            <label class="container">White
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Blue
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Black
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Red
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Green
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Colorless
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Exactly these colors</a>
+                  <a href="#">Including these colors</a>
+                  <a href="#">At most these colors</a>
+                </div>
+            </div>
+
+            <h2>Commander</h2>
+            <label class="container">White
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Blue
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Black
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Red
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Green
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Colorless
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <h2>Mana Cost</h2>
+            <input class="nav-item active search-bar" type="search" placeholder="Any mana cost, e.g. '{W}{W}'" autocomplete="off" maxlength="100" minlength="0">
+            <!-- <label class="container">Any mana cost, e.g. "{W}{W}"
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label> -->
+
+            <h2>Rarity</h2>
+            <label class="container">Common
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Uncommon
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Rare
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Mythic Rare
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <h2>Artist</h2>
+            <input class="nav-item active search-bar" type="search" placeholder="Any artist name, e.g. 'Magali'" autocomplete="off" maxlength="100" minlength="0">
+
+            <h2>Flavor Text</h2>
+            <input class="nav-item active search-bar" type="search" placeholder="Any text, especially names. e.g. 'Kjerldoran'" autocomplete="off" maxlength="100" minlength="0">
+            
+            <h2>Lore Finder</h2>
+            <input class="nav-item active search-bar" type="search" placeholder="Any text, especially names. e.g. 'Jhoira'" autocomplete="off" maxlength="100" minlength="0">
+        </div>
+
+        <div>
+            <button class="search-with-options" type="button">Search with these options</button>
+        </div>
+        <div>
+            <button class="clear-filters" type="button">Clear Filters</button>
+        </div>
+    </section>
+
+
+
+
+</body>
+<script type = "text/javascript" src="/scripts/index.js"></script>
 </html>

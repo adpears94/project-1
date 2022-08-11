@@ -6,38 +6,53 @@
         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="./images/color-wheel-logo.png"/>
         <link rel="stylesheet" href="/styles/main.css"/>
-    </head>
+</head>
     <header>
-        <nav class="shift">
+        <nav>
             <div class="nav-container">
                 <div class="link-container">
-                    <div class="nav-item active">
-                        <a id="Homepage" href="./Homepage.html">
+                    <div class="nav-item">
+                        <a href="Homepage.html" id="Homepage">
                         <img src="./images/color-wheel-logo.png"width="28" height="28" >
                         </a>
                     </div>
-                    <div class="nav-item active">
-                        <a href="./Homepage.html">
-                            <span href="./Homepage.html"> Random Card</span>
+                    <div class="nav-item">
+                        <a href="Homepage.html" id="Random-Card">
+                            <span> Random Card</span>
                         </a>   
                     </div>
-                    <a href="./Homepage.html">
-                        <span href="./Homepage.html"> Advanced Search</span>
+
+                    <a href="./Advanced.html">
+                        <span href="./Advanced.html"> Advanced Search</span>
                     </a>
                     <a href="./Homepage.html">
                         <span href="./Homepage.html"> About</span>
                     </a>
+
+                    <div class="nav-item">
+                        <a href="Homepage.html"id="Advanced-Search">
+                            <span> Advanced Search</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="Homepage.html"id="About">
+                        <span> About</span>
+                        </a>
+                    </div>
+                    
+
                     </div >
                     <div class="search-bar-container">
-                        <input class="nav-item active search-bar" type="search" placeholder="Search..." autocomplete="off" maxlength="100" minlength="0">
-                        <button class="nav-item active search-button"><i class="fa fa-search"></i></button>
+                        <input class="searchBar nav-item active search-bar" type="search" placeholder="Search..." autocomplete="off" maxlength="100" minlength="0">
+                        <button class="searchButton nav-item active search-button"><i class="fa fa-search"></i></button>
                     </div>
             </div>
         </nav>
     </header>
-    <body class = "content">
-        
-       
+    <body>
+        <div id="content-container" class="content-container" >
+           
+        </div>
+        <script type = "module" src="/scripts/index.js"></script>
     </body>
-    <script type = "text/javascript" src="/scripts/index.js"></script>
 </html>
