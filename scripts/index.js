@@ -94,67 +94,139 @@ const buildHomePage = async () => {
   });
   
   //Deals with generating the search result page when using the navigation bar's search bar in the middle of the screen////////
-  document.querySelector(".searchButton").addEventListener("click", async (event) => {
-    event.preventDefault();
-    if (document.querySelector(".searchBar").value !== "") {
-      let search = document.querySelector(".searchBar").value;
-      document.getElementById("bg-image").style.backgroundImage = `none`;
-      document.querySelector("#content-container").innerHTML = ` 
-          <div class="search-result-box">
-          </div>`;
+document.querySelector(".searchButton").addEventListener("click", (event) => {
+  event.preventDefault();
+  if (document.querySelector(".searchBar").value !== "") {
+    let search = document.querySelector(".searchBar").value;
+    document.querySelector("#content-container").innerHTML = ` 
+        <div class="search-result-box">
+        </div>`;
 
-      let data = await ScryfallFetch.getSearch(search);
-      for (let i = 0; i < data.data.length; i++) {
-        if (data.data[i].image_uris) {
-          content = `
-                  <div class="search-result-item">
-                      <a href="">
-                          <img id="${data.data[i].name}" src="${data.data[i].image_uris.small}" height="300px" >
-                      </a>
-                  </div>`;
-          document.querySelector(".search-result-box").innerHTML += content;
+    let fetchURL = `https://api.scryfall.com/cards/search?q=` + search;
+    fetch(fetchURL)
+      .then((response) => response.json())
+      .then((data) => {
+        //grab needed data
+        for (let i = 0; i < data.data.length; i++) {
+          if (data.data[i].image_uris) {
+            content = `
+                    <div class="search-result-item">
+                        <a href="#">
+                            <img id="${data.data[i].name}" src="${data.data[i].image_uris.small}" height="300px" >
+                        </a>
+                    </div>`;
+            document.querySelector(".search-result-box").innerHTML += content;
+          }
         }
-      }
-      document.querySelector(".search-result-box").addEventListener("click", (event) => {
-        if(event.target){
-          buildCardPage(event.target.id)
-        }
+        document.querySelector(".search-result-box").addEventListener("click", (event) => {
+          if(event.target){
+            buildCardPage(event.target.id)
+          }
+        })
       });
-    }
-  });
+  }
+});
 
-  //Deals with generating the search result page when using the landing page's search bar in the middle of the screen////////
-  document.querySelector("#content-container").addEventListener("click", async (event) => {
+
+//Deals with generating the search result page when using the landing page's search bar in the middle of the screen////////
+document.querySelector("#content-container")
+  .addEventListener("click", (event) => {
     if (event.target && event.target.id === "searchButton") {
       if (document.querySelector("#searchBar").value !== "") {
         let search = document.querySelector("#searchBar").value;
         document.querySelector("#content-container").innerHTML = ` 
         <div class="search-result-box">
         </div>`;
-        let data = await ScryfallFetch.getSearch(search);
-        for (let i = 0; i < data.data.length; i++) {
-          for (let i = 0; i < data.data.length; i++) {
-            if (data.data[i].image_uris) {
-              content = `
-                  <div class="search-result-item">
-                      <a href="">
-                          <img id="${data.data[i].name}" src="${data.data[i].image_uris.small}" height="300px" >
-                      </a>
-                  </div>`;
-              document.querySelector(".search-result-box").innerHTML += content;
+
+
+        let fetchURL = `https://api.scryfall.com/cards/search?q=` + search;
+        fetch(fetchURL)
+          .then((response) => response.json())
+          .then((data) => {
+            //grab needed data
+            for (let i = 0; i < data.data.length; i++) {
+              if (data.data[i].image_uris) {
+                content = `
+                    <div class="search-result-item">
+                        <a href="#">
+                            <img id="${data.data[i].name}" src="${data.data[i].image_uris.small}" height="300px" >
+                        </a>
+                    </div>`;
+                document.querySelector(".search-result-box").innerHTML += content;
+              }
             }
-          }
-          document.querySelector(".search-result-box").addEventListener("click", (event) => {
-            if(event.target){
-              buildCardPage(event.target.id)
-            }
-          })
-        }
-      } 
-    } else if (event.target && event.target.id === "random-search"){
-      buildCardPage();
+            document.querySelector(".search-result-box").addEventListener("click", (event) => {
+              if(event.target){
+                buildCardPage(event.target.id)
+              }
+            })
+          });
+      }
     }
+  
   });
+  // //Deals with generating the search result page when using the navigation bar's search bar in the middle of the screen////////
+  // document.querySelector(".searchButton").addEventListener("click", async (event) => {
+  //   event.preventDefault();
+  //   if (document.querySelector(".searchBar").value !== "") {
+  //     let search = document.querySelector(".searchBar").value;
+  //     document.getElementById("bg-image").style.backgroundImage = `none`;
+  //     document.querySelector("#content-container").innerHTML = ` 
+  //         <div class="search-result-box">
+  //         </div>`;
+
+  //     let data = await ScryfallFetch.getSearch(search);
+  //     for (let i = 0; i < data.data.length; i++) {
+  //       if (data.data[i].image_uris) {
+  //         content = `
+  //                 <div class="search-result-item">
+  //                     <a href="">
+  //                         <img id="${data.data[i].name}" src="${data.data[i].image_uris.small}" height="300px" >
+  //                     </a>
+  //                 </div>`;
+  //         document.querySelector(".search-result-box").innerHTML += content;
+  //       }
+  //     }
+  //     document.querySelector(".search-result-box").addEventListener("click", (event) => {
+  //       if(event.target){
+  //         buildCardPage(event.target.id)
+  //       }
+  //     });
+  //   }
+  // });
+
+  // //Deals with generating the search result page when using the landing page's search bar in the middle of the screen////////
+  // document.querySelector("#content-container").addEventListener("click", async (event) => {
+  //   if (event.target && event.target.id === "searchButton") {
+  //     if (document.querySelector("#searchBar").value !== "") {
+  //       let search = document.querySelector("#searchBar").value;
+  //       document.querySelector("#content-container").innerHTML = ` 
+  //       <div class="search-result-box">
+  //       </div>`;
+  //       let data = await ScryfallFetch.getSearch(search);
+  //       for (let i = 0; i < data.data.length; i++) {
+  //         for (let i = 0; i < data.data.length; i++) {
+  //           if (data.data[i].image_uris) {
+  //             content = `
+  //                 <div class="search-result-item">
+  //                     <a href="">
+  //                         <img id="${data.data[i].name}" src="${data.data[i].image_uris.small}" height="300px" >
+  //                     </a>
+  //                 </div>`;
+  //             document.querySelector(".search-result-box").innerHTML += content;
+  //           }
+  //         }
+  //         document.querySelector(".search-result-box").addEventListener("click", (event) => {
+  //           if(event.target){
+  //             buildCardPage(event.target.id)
+  //           }
+  //         })
+  //       }
+  //     } 
+  //   } else if (event.target && event.target.id === "random-search"){
+  //     buildCardPage();
+  //   }
+  // });
 
 }
 

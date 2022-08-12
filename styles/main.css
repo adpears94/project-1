@@ -109,7 +109,7 @@ h1{
 
 
 }
-<<<<<<< HEAD
+
 /* img{
     border: 5px solid #555;
 } */
@@ -121,8 +121,8 @@ h1{
 img{
     border: 5px solid #555;
 }
-=======
->>>>>>> 784838b0757097ffd4d31bb0fe0f7f6953f30930
+
+
 .dropdown {
     float: left;
     overflow: hidden;
@@ -154,10 +154,7 @@ img{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 784838b0757097ffd4d31bb0fe0f7f6953f30930
 .search-result-box{
     width: 90vw;
     height: 80vh;
