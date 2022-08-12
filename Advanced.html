@@ -54,24 +54,29 @@
         </div>
     </section>
 
-    <section class="advanced-filtering">
+    <div? class="advanced-filtering">
         <div class="form-row">
         
-            <label class="form-row-label" for="name">Card Name</label>  
+            <label class="form-row-label" for="name"><h2>Card Name:</h2></label>  
             <div class="form-row-content">        
                 <input id="name-search" class="nav-item active search-bar" type="search" placeholder="Any words in the name, e.g. 'Fire'" autocomplete="off" maxlength="100" minlength="0">
             </div>
-            <label class="form-row-label" for="name">Text</label> 
+
+          
+            <label class="form-row-label" for="name"><h2>Text:</h2></label> 
                 <input id="text-search" class="nav-item active search-bar" type="search" placeholder="Any test, e.g. 'draw a card'" autocomplete="off" maxlength="100" minlength="0">
 
-                <label class="form-row-label" for="name">Type Line</label> 
+             
+                <label class="form-row-label" for="name"><h2>Type Line</h2></label> 
                 <input id="type-line-search" class="nav-item active search-bar" type="search" placeholder="Enter a type or choose from the list" autocomplete="off" maxlength="100" minlength="0">
-                <label class="container">Allow partial type matches
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                </label>
 
-            <label class="form-row-label" for="name">Colors</label> 
+               
+        </div>
+
+        <div class = "form-row">            
+            <label class="form-row-label" for="name"><h2>Colors:</h2></label> 
+           
+           <div class="white-box">
             <label id="White-box" class="container">White
               <input type="checkbox">
               <span class="checkmark"></span>
@@ -96,7 +101,9 @@
               <input type="checkbox">
               <span class="checkmark"></span>
             </label>
-            <div class="dropdown">
+            </div>
+          </div>    
+            <!-- <div class="dropdown">
                 <button class="dropbtn">Dropdown 
                   <i class="fa fa-caret-down"></i>
                 </button>
@@ -105,11 +112,14 @@
                   <a href="#">Including these colors</a>
                   <a href="#">At most these colors</a>
                 </div>
-            </div>
-
-            <label class="form-row-label" for="name">Commander</label> 
-            <label id="White-box" class="container">White
-              <input type="checkbox">
+            </div> -->
+        <div class="form-row">  
+          <div class="commander">
+            <label class="form-row-label" for="commander"><h2>Commander:</h2></label> 
+              
+          <div class="white-box">   
+            <label  class="container">White
+              <input  type="checkbox">
               <span class="checkmark"></span>
             </label>
             <label id="Blue-box" class="container">Blue
@@ -132,48 +142,64 @@
               <input type="checkbox">
               <span class="checkmark"></span>
             </label>
-
-            <label class="form-row-label" for="name">Mana Cost</label> 
+            </div>
+           </div> 
+          </div>
+        <div class="form-row">
+            <label class="form-row-label" for="mana-cost"><h2>Mana Cost:</h2></label> 
             <input id="search-by-mana" class="nav-item active search-bar" type="search" placeholder="Any mana cost, e.g. '{W}{W}'" autocomplete="off" maxlength="100" minlength="0">
             <!-- <label class="container">Any mana cost, e.g. "{W}{W}"
                 <input type="checkbox">
                 <span class="checkmark"></span>
             </label> -->
-
-            <label class="form-row-label" for="name">Rarity</label> 
-            <label id="Common-box" class="container">Common
+          </div>
+        <div class="form-row">
+          <div class="white-box">
+           <label class="form-row-label" for="rarity"><h2>Rarity:</h2></label> 
+           <div class="white-box">   
+            <label  class="container">Common
+              <input  type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label id="Blue-box" class="container">Uncommon
               <input type="checkbox">
               <span class="checkmark"></span>
             </label>
-            <label id="Uncommon-box" class="container">Uncommon
+            <label id="Black-box" class="container">Rare
               <input type="checkbox">
               <span class="checkmark"></span>
             </label>
-            <label id="Rare-box" class="container">Rare
+            <label id="Red-box" class="container">Mythic Rare
               <input type="checkbox">
               <span class="checkmark"></span>
             </label>
-            <label id="Mythic Rare" class="container">Mythic Rare
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-
-            <label class="form-row-label" for="name">Artist</label> 
+          </div>
+        </div>
+       </div> 
+        
+          <div class="form-row">
+            <label class="form-row-label" for="artist"><h2>Artist:</h2></label> 
             <input class="nav-item active search-bar" type="search" placeholder="Any artist name, e.g. 'Magali'" autocomplete="off" maxlength="100" minlength="0">
-
-            <label class="form-row-label" for="name">Flavor Text</label> 
+          </div>  
+         <div class="form-row">
+            <label class="form-row-label" for="flavor-text"><h2>Flavor Text:</h2></label> 
             <input class="nav-item active search-bar" type="search" placeholder="Any text, especially names. e.g. 'Kjerldoran'" autocomplete="off" maxlength="100" minlength="0">
-            
-            <label class="form-row-label" for="name">Lore Finder</label> 
+            </div>
+          <div class="form-row">  
+            <label class="form-row-label" for="lore-finder"><h2>Lore Finder:</h2></label> 
             <input class="nav-item active search-bar" type="search" placeholder="Any text, especially names. e.g. 'Jhoira'" autocomplete="off" maxlength="100" minlength="0">
         </div>
 
-        <div>
-            <button class="search-with-options" type="button">Search with these options</button>
+        <div class="search-buttons">
+          <div class="nav-item">   
+            <button id="searchButton" class="search-buttons-long">Search using these options</button>
+           </div>
+        <div class="nav-item">
+          
+            <button  id="searchButton"  class="search-buttons-long" >Clear Filters</button>
+          </div>
         </div>
-        <div>
-            <button class="clear-filters" type="button">Clear Filters</button>
-        </div>
+    </div>
     </section>
 
 

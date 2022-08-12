@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+
 const buildCardPage = async(inputCard) => {
   // console.log(inputCard)
   
@@ -18,7 +19,11 @@ const buildCardPage = async(inputCard) => {
   console.log(card.scryfall_uri);
   console.log(symbols[0])
   let manaCost = card.mana_cost.match(/.{1,3}/g);
+  
   console.log(manaCost)
+
+  
+
   // for(symbol in symbols){
   // let result = symbol[0]..match()
   // }
@@ -36,7 +41,7 @@ let cardOracleTxt = card.oracle_text;
   let cardName = card.name;
   // console.log(card)
 
-  document.getElementById("bg-image").style.backgroundImage = `url(${cardImgArt})`;
+  document.querySelector("#bg-image").style.backgroundImage = `url(${cardImgArt})`;
   
   let pageHtml = `
 <div class="main-content">
@@ -60,7 +65,6 @@ let cardOracleTxt = card.oracle_text;
 } 
 
 // buildCardPage('make your mark');
-
 buildCardPage()
 
 
