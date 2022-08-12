@@ -5,16 +5,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-const buildPage = async() => {
-  let card = await ScryfallFetch.getRandom();
-  let cardOracleTxt = card.oracle_text;
+const buildCardPage = async(inputCard) => {
+  // console.log(inputCard)
+  
+  let card = {}
+  if(inputCard === undefined) {
+    card = await ScryfallFetch.getRandom();
+  } else {
+  card = await ScryfallFetch.getNamed(inputCard)
+  }
+  let symbols = await ScryfallFetch.getSymbols();
+  console.log(card.scryfall_uri);
+  console.log(symbols[0])
+  let manaCost = card.mana_cost.match(/.{1,3}/g);
+  console.log(manaCost)
+  // for(symbol in symbols){
+  // let result = symbol[0]..match()
+  // }
+  
+
+
+let cardOracleTxt = card.oracle_text;
   let cardColors = card.colors;
   let cardImgPng = card.image_uris.png;
   let cardImgArt = card.image_uris.art_crop;
   let cardType = card.type_line;
   let cardRarity = card.rarity;
   let cardFlavorText = card.flavor_text;
-  let cardArtist = card.artist_ids[0];
+  let cardArtist = card.artist;
   let cardName = card.name;
   // console.log(card)
 
@@ -41,7 +59,9 @@ const buildPage = async() => {
     document.getElementById('main-content').innerHTML = (pageHtml);
 } 
 
-buildPage();
+// buildCardPage('make your mark');
+
+buildCardPage()
 
 
 
@@ -60,5 +80,11 @@ buildPage();
 
 // }
 // getNamedCard();
+
+// const getSymbol = async() => {
+//   let symbols = await ScryfallFetch.getSymbols();
+//   console.log(symbols);
+// }
+// getSymbol();
 
 
