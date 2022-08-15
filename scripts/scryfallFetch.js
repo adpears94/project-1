@@ -1,19 +1,23 @@
-
 export class ScryfallFetch {
   constructor(){
 
   }
-  static async getRandom() {
-    let response = await fetch(`https://api.scryfall.com/cards/random`)
-    let data = await response.json()
-    //console.log(data)
-    return data;
+  static async getRandom(query) {
+    if(!query){
+      let response = await fetch(`https://api.scryfall.com/cards/random`)
+      let data = await response.json()
+      return data;
+    } else {
+      let response = await fetch(`https://api.scryfall.com/cards/random${query}`)
+      //console.log(response);
+      return data;
+    }
   }
   static async getSearch(userSearch) {
     console.log(userSearch);
     let response = await fetch(`https://api.scryfall.com/cards/search?q=${userSearch}`)
     let data = await response.json()
-    //console.log(data)
+    // console.log(data)
     return data;
   }
   static async getNamed(userSearch) {
