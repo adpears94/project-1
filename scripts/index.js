@@ -525,7 +525,7 @@ const buildAdvancedPage = () => {
 
         let rarityDropdown = document.getElementById("rarity")
         let rarityValue = rarityDropdown.options[rarityDropdown.selectedIndex].value
-        query.push('rarity%3A' + rarityValue)
+        query.push('rarity>%3D' + rarityValue)
 
         
         let colorsChecked = ''
