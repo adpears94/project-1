@@ -1,0 +1,78 @@
+<section class="hero">
+  <div class="container">
+      <div class="lext-col">
+          <h2>Searching for something different?</h2>
+      
+      </div>
+  </div>
+</section>
+  
+<div class="about-page">
+  <div class="advanced-filtering">
+    <div class="form-row">
+      <label class="form-row-label" for="name"><h2>Card Name:</h2></label>  
+      <input id="nameSearch" class="nav-item active search-bar" type="search" placeholder="Any words in the name, e.g. 'Fire'" autocomplete="off" maxlength="100" minlength="0">
+      <label class="form-row-label" for="name"><h2>Text:</h2></label> 
+      <input id="textSearch" class="nav-item active search-bar" type="search" placeholder="Any test, e.g. 'draw a card'" autocomplete="off" maxlength="100" minlength="0">
+      <label class="form-row-label" for="name"><h2>Type:</h2></label> 
+      <input id="typeLineSearch" class="nav-item active search-bar" type="search" placeholder="Enter a type or choose from the list" autocomplete="off" maxlength="100" minlength="0">
+    </div>             
+
+    <div class="form-row">
+      <label class="form-row-label" for="artist"><h2>Mana Cost:</h2></label> 
+      <input id="manaSearch" class="nav-item active search-bar" type="search" placeholder="mana cost, '{W}{W}'" autocomplete="off" maxlength="100" minlength="0">
+      <label class="form-row-label" for="artist"><h2>Artist:</h2></label> 
+      <input id="artistSearch" class="nav-item active search-bar" type="search" placeholder="Any artist name, e.g. 'Magali'" autocomplete="off" maxlength="100" minlength="0">
+      <label class="form-row-label" for="flavor-text"><h2>Flavor Text:</h2></label> 
+      <input id="flavorSearch" class="nav-item active search-bar" type="search" placeholder="Any text, especially names. e.g. 'Kjerldoran'" autocomplete="off" maxlength="100" minlength="0">
+    </div>
+
+    <div class="form-row">
+      <h2>Colors Included:</h2>
+      <label class="container">White
+        <input type="checkbox" id="White-box">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Blue
+        <input type="checkbox" id="Blue-box">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Black
+        <input type="checkbox" id="Black-box">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Red
+        <input type="checkbox" id="Red-box">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Green
+        <input type="checkbox" id="Green-box">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Colorless
+        <input type="checkbox" id="Colorless-box">
+        <span class="checkmark"></span>
+      </label>
+    </div>    
+
+    <div class="form-row">
+      <form>
+        <h2>Choose a rarity:</h2>
+        <select name="rarity" id="rarity">
+          <option value="common">Common</option>
+          <option value="uncommon">Uncommon</option>
+          <option value="rare">Rare</option>
+          <option value="mythicRare">Mythic Rare</option>
+        </select>
+      </form>
+    </div>
+    
+    <div class="search-buttons">
+      <div class="nav-item">   
+        <button id="searchOptionsButton" class="search-buttons-long">Search using these options</button>
+        <br>
+        <button  id="clearButton"  class="search-buttons-long" >Clear Filters</button>
+      </div>
+    </div>
+  </div>
+</div>
